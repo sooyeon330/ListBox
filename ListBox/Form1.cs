@@ -29,14 +29,20 @@ namespace ListBox
             {
                 this.lbView.Items.Add(this.txtList.Text);
                 this.txtList.Text = "";
+                this.txtList.Focus();
             }
             else
             {
-                MessageBox.Show("아이템을 입력하세요", "알림",
+                MessageBox.Show("추가할 아이템을 입력하세요", "알림",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.txtList.Focus();
             }
 
+        }
+
+        private void LbView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.lbResult.Text = this.OrgStr + this.lbView.SelectedItem.ToString();
         }
     }
 }

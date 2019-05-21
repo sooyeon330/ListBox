@@ -42,6 +42,7 @@
             this.lbView.Name = "lbView";
             this.lbView.Size = new System.Drawing.Size(292, 256);
             this.lbView.TabIndex = 0;
+            this.lbView.SelectedIndexChanged += new System.EventHandler(this.LbView_SelectedIndexChanged);
             // 
             // lbResult
             // 
